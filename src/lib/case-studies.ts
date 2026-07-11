@@ -14,108 +14,45 @@ export type CaseStudy = {
 
 export const caseStudies: CaseStudy[] = [
   {
-    slug: "communn",
-    title: "Communn.io",
-    description:
-      "A community platform built for creators to connect, collaborate, and grow their audience with a polished, scalable web experience.",
-    image: "/product-screenshots/communn.png",
-    client: "Communn.io",
-    industry: "Community & SaaS",
-    services: ["Product Design", "Web Development", "Platform Engineering"],
-    overview:
-      "Communn.io needed a digital home that felt as vibrant as the communities it serves — fast, intuitive, and ready to scale as membership grows.",
-    challenge:
-      "The team had strong product vision but needed a cohesive frontend experience that could handle real-time engagement features without sacrificing performance or brand polish.",
-    solution:
-      "We designed and built a responsive platform with clear information architecture, modular UI components, and performance-first patterns that keep interactions smooth across devices.",
-    results: [
-      "Launch-ready platform with a premium, creator-first feel",
-      "Scalable component system for rapid feature iteration",
-      "Improved onboarding clarity and engagement flows",
-    ],
-  },
-  {
-    slug: "illumora",
-    title: "Illumora",
-    description:
-      "A refined brand and product experience for Illumora, focused on clarity, trust, and conversion across their customer journey.",
-    image: "/product-screenshots/illumora.png",
-    client: "Illumora",
-    industry: "D2C & Brand Experience",
-    services: ["Brand Experience", "Ecommerce UX", "Frontend Development"],
-    overview:
-      "Illumora wanted a digital presence that matched the quality of their offering — one that builds trust quickly and guides visitors toward meaningful action.",
-    challenge:
-      "Their previous experience lacked visual consistency and did not communicate value clearly enough for new visitors arriving from paid and organic channels.",
-    solution:
-      "We rebuilt key customer-facing surfaces with a conversion-focused layout, strong typography hierarchy, and imagery that reinforces brand credibility at every step.",
-    results: [
-      "More cohesive brand storytelling across the site",
-      "Clearer path from discovery to purchase",
-      "Modern UI foundation ready for future campaigns",
-    ],
-  },
-  {
     slug: "boombooth",
     title: "BoomBooth Studios",
     description:
-      "An immersive studio website that showcases BoomBooth's creative work and makes booking inquiries effortless.",
+      "From Ghost Studio to Go-To Hub: Building BoomBooth Studios' Digital Empire from Scratch.",
     image: "/product-screenshots/boombooth.png",
     client: "BoomBooth Studios",
-    industry: "Creative Studio",
-    services: ["Web Design", "Showcase Experience", "Lead Capture"],
+    industry: "Creative & Podcast Studio",
+    services: ["Web Design & Development", "Booking Engine Integration", "Organic Content Strategy"],
     overview:
-      "BoomBooth Studios needed a site that feels as bold as their productions while staying practical for prospects exploring services and reaching out.",
+      "How we built a comprehensive digital ecosystem that turned a quiet, localized recording space into a highly recognized brand name in the podcasting industry.",
     challenge:
-      "The studio's work is visually rich, but their old site did not present projects with enough impact or guide visitors toward inquiry.",
+      "Despite top-tier studio gear and talent, the brand had zero web presence. They relied entirely on manual scheduling via text and lacked any online discoverability.",
     solution:
-      "We crafted a showcase-led experience with strong visual rhythm, project highlights, and strategically placed calls to action that reduce friction for new leads.",
+      "We engineered an immersive digital flagship showcasing audio/video quality, deployed a fully automated self-service booking system, and built an organic content recycling engine.",
     results: [
-      "Portfolio-first layout that elevates studio work",
-      "Streamlined inquiry flow for prospective clients",
-      "Distinct brand presence that stands out in a crowded market",
-    ],
-  },
-  {
-    slug: "chordai",
-    title: "ChordAI",
-    description:
-      "A product landing experience for ChordAI that communicates innovation clearly and supports user acquisition.",
-    image: "/product-screenshots/chordai.png",
-    client: "ChordAI",
-    industry: "AI & Music Tech",
-    services: ["Landing Page Design", "Product Marketing UX", "Development"],
-    overview:
-      "ChordAI needed a launch-ready web experience that explains a complex product simply and motivates early adopters to try the platform.",
-    challenge:
-      "Translating advanced AI capabilities into a message that feels approachable, credible, and exciting for musicians and creators.",
-    solution:
-      "We structured the page around outcome-driven messaging, intuitive feature sections, and visual cues that make the product value obvious within seconds.",
-    results: [
-      "Clearer product narrative for first-time visitors",
-      "Stronger visual identity around the ChordAI brand",
-      "Flexible page structure for ongoing feature launches",
+      "Built a 100% custom digital blueprint and authority hub.",
+      "Launched an automated engine to eliminate booking admin work.",
+      "Deployed an omnichannel content funnel using client sessions.",
     ],
   },
   {
     slug: "ojas3d",
     title: "Ojas3D Creatives",
     description:
-      "A premium portfolio experience for Ojas3D Creatives, designed to highlight craftsmanship and drive project inquiries.",
+      "Digitizing Green Tech: Moving an Eco-Friendly 3D Printing Service from Offline Sales to Automated Online Orders.",
     image: "/product-screenshots/ojas3d.png",
     client: "Ojas3D Creatives",
-    industry: "3D & Visual Production",
-    services: ["Portfolio Design", "Visual Storytelling", "Web Development"],
+    industry: "Sustainable 3D Printing Services",
+    services: ["E-Commerce Architecture", "Product Catalog Design", "Workflow Automation"],
     overview:
-      "Ojas3D Creatives wanted a digital portfolio that reflects the detail and quality of their 3D work while making it easy for clients to get in touch.",
+      "How we transitioned an eco-friendly 3D printing services business into a streamlined, automated online storefront that scales sustainable additive manufacturing.",
     challenge:
-      "High-fidelity creative work can be hard to present online without losing impact or slowing down the browsing experience.",
+      "High-potential green 3D printing capabilities were limited by offline operations. Gathering print requirements, calculating eco-material choices, and invoicing via WhatsApp created severe manual bottlenecks.",
     solution:
-      "We built a lightweight, image-forward portfolio with thoughtful spacing, smooth transitions, and contact paths tailored for agency and brand leads.",
+      "We built a high-performance digital portal that simplifies custom dimensions, structures eco-friendly material selection (like biodegradable PLA), and fully automates the order-to-production pipeline.",
     results: [
-      "Portfolio presentation that does justice to 3D work",
-      "Improved clarity around services and capabilities",
-      "Professional site experience that supports new business",
+      "Successfully migrated manual offline intake into a 24/7 automated portal.",
+      "Highlighted eco-friendly materials to attract sustainably minded brands and creators.",
+      "Removed the founder from manual quoting loops, drastically reducing fulfillment friction.",
     ],
   },
 ];
