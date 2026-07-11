@@ -7,15 +7,15 @@ import { Card, CardContent } from "@/components/ui/card";
 const items = [
   {
     title: "Conversion-Driven Experiences",
-    image: "/features/customer-journey.jpg",
+    image: "/features/conversion.png",
   },
   {
     title: "Premium Brand Experiences",
-    image: "/features/checkout.jpg",
+    image: "/features/performance.png",
   },
   {
     title: "Built to Scale",
-    image: "/features/scale.png",
+    image: "/features/scale-1.png",
   },
 ];
 
