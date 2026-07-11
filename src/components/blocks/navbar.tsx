@@ -2,13 +2,13 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
- 
+
   NavigationMenuItem,
- 
+
   NavigationMenuList,
- 
+
 } from "@/components/ui/navigation-menu";
- import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 
 const ITEMS = [
   { label: "Testimonials", href: "/#testimonials" },
@@ -20,7 +20,7 @@ const ITEMS = [
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-   const [pathname, setPathname] = useState("");
+  const [pathname, setPathname] = useState("");
 
   useEffect(() => {
     setPathname(window.location.pathname);
@@ -42,30 +42,31 @@ export const Navbar = () => {
         <NavigationMenu className="max-lg:hidden">
           <NavigationMenuList>
             {ITEMS.map((link) =>
-             <NavigationMenuItem key={link.label} className="">
-             <a
-               href={link.href}
-               className={cn(
-                 "relative bg-transparent px-1.5 text-sm font-medium transition-opacity hover:opacity-75",
-                 pathname === link.href && "text-muted-foreground",
-               )}
-             >
-               {link.label}
-             </a>
-           </NavigationMenuItem>
+              <NavigationMenuItem key={link.label} className="">
+                <a
+                  href={link.href}
+                  className={cn(
+                    "relative bg-transparent px-1.5 text-sm font-medium transition-opacity hover:opacity-75",
+                    pathname === link.href && "text-muted-foreground",
+                  )}
+                >
+                  {link.label}
+                </a>
+              </NavigationMenuItem>
             )}
           </NavigationMenuList>
         </NavigationMenu>
 
         {/* Auth Buttons */}
         <div className="flex items-center gap-2.5">
-          
+
           <a href="/login" className="max-lg:hidden">
             <Button variant="outline">
-              <span className="relative z-10">Book a call</span>
+              <a href="https://cal.com/manoj-sravan-annivg/strategy-call" target="_blank"> <span className="relative z-10">Book a call</span> </a>
+
             </Button>
           </a>
-          
+
 
           {/* Hamburger Menu Button (Mobile Only) */}
           <button
@@ -102,7 +103,7 @@ export const Navbar = () => {
       >
         <nav className="divide-border flex flex-1 flex-col divide-y">
           {ITEMS.map((link) =>
-              <a
+            <a
               key={link.label}
               href={link.href}
               className={cn(
