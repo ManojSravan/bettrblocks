@@ -6,16 +6,16 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const items = [
   {
-    title: "Clarity before code",
-    image: "/features/triage-card.svg",
+    title: "Conversion-Driven Experiences",
+    image: "/features/customer-journey.jpg",
   },
   {
-    title: "Design that ships",
-    image: "/features/cycle-card.svg",
+    title: "Premium Brand Experiences",
+    image: "/features/checkout.jpg",
   },
   {
-    title: "Engineering you can scale",
-    image: "/features/overview-card.svg",
+    title: "Built to Scale",
+    image: "/features/scale.png",
   },
 ];
 
@@ -25,21 +25,19 @@ export const Features = () => {
       <div className="container">
         {/* Top dashed line with text */}
         <div className="relative flex items-center justify-center">
-          <DashedLine className="text-muted-foreground" />
-          <span className="bg-muted text-muted-foreground absolute px-3 font-mono text-sm font-medium tracking-wide max-md:hidden">
-            MEASURE TWICE. CUT ONCE.
+          <DashedLine className="text-gray-300" />
+          <span className="bg-muted text-gray-300 absolute px-3 font-mono text-sm font-medium tracking-wide max-md:hidden">
+            Build once. Scale forever.
           </span>
         </div>
 
         {/* Content */}
         <div className="mx-auto mt-10 grid max-w-6xl items-center gap-3 md:gap-0 lg:mt-24 lg:grid-cols-2">
           <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-            Built for founders shipping their first product
+           Built for ambitious <br /> D2C brands
           </h2>
-          <p className="text-muted-foreground leading-snug">
-            We partner with small startups and non‑technical founders to deliver
-            production-ready MVPs: crisp scope, great UX, and solid engineering
-            foundationswithout the overhead of building an in-house team.
+          <p className="text-gray-300 leading-snug">
+           We partner with growing D2C brands to craft high-converting ecommerce experiences, customer-facing applications, and scalable digital platforms that strengthen your brand and accelerate online growth.
           </p>
         </div>
 

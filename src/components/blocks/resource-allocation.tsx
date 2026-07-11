@@ -4,9 +4,9 @@ import { cn } from "@/lib/utils";
 
 const topItems = [
   {
-    title: "Product brief templates.",
+    title: "A clear plan before we begin.",
     description:
-      "Align on scope, success metrics, and timelines before we write a line of code.",
+      "We map out your goals, timeline, and what success looks like so there's no guesswork, only clarity from day one.",
     images: [
       {
         src: "/resource-allocation/templates.webp",
@@ -20,8 +20,9 @@ const topItems = [
     fade: [""],
   },
   {
-    title: "One source of truth.",
-    description: "Roadmap, designs, and decisions captured so everyone stays aligned.",
+    title: "Nothing gets lost.",
+    description:
+      "Every decision, file, and update lives in one place so you're never left wondering where things stand.",
     images: [
       { src: "/logos/jira.svg", alt: "Jira logo", width: 48, height: 48 },
       { src: "/logos/excel.svg", alt: "Excel logo", width: 48, height: 48 },
@@ -45,12 +46,11 @@ const topItems = [
         height: 48,
       },
       {
-        src: "/logos/jira.svg",
-        alt: "Jira logo",
+        src: "/logos/asana.svg",
+        alt: "Asana logo",
         width: 48,
         height: 48,
       },
-      { src: "/logos/asana.svg", alt: "Asana logo", width: 48, height: 48 },
     ],
     className:
       "flex-1 [&>.title-container]:mb-5 md:[&>.title-container]:mb-8 md:[&>.title-container]:translate-x-2 xl:[&>.title-container]:translate-x-4 [&>.title-container]:translate-x-0",
@@ -60,9 +60,9 @@ const topItems = [
 
 const bottomItems = [
   {
-    title: "Scope guardrails.",
+    title: "No surprise costs.",
     description:
-      "We protect your MVP from bloat with clear trade-offs and prioritized delivery.",
+      "We keep your project focused and on-budget, with clear trade-offs agreed upfront no scope creep, no hidden delays.",
     images: [
       {
         src: "/resource-allocation/graveyard.webp",
@@ -76,9 +76,9 @@ const bottomItems = [
     fade: ["bottom"],
   },
   {
-    title: "Founder updates.",
+    title: "You're always in the loop.",
     description:
-      "Weekly demos, async updates, and crisp decisions—no confusing status meetings.",
+      "Weekly updates and direct access to your team no confusing jargon, no chasing for answers.",
     images: [
       {
         src: "/resource-allocation/discussions.webp",
@@ -92,9 +92,9 @@ const bottomItems = [
     fade: [""],
   },
   {
-    title: "Launch-ready delivery.",
+    title: "Launched, and supported.",
     description:
-      "Production deploys, analytics, monitoring, and handoff so you can keep shipping.",
+      "Your website or app goes live fully tested and ready for customers with support after launch, not just a handoff.",
     images: [
       {
         src: "/resource-allocation/notifications.webp",
@@ -109,6 +109,7 @@ const bottomItems = [
   },
 ];
 
+ 
 export const ResourceAllocation = () => {
   return (
     <section
@@ -175,7 +176,7 @@ const Item = ({ item, isLast, className }: ItemProps) => {
     >
       <div className="title-container text-balance">
         <h3 className="inline font-semibold">{item.title} </h3>
-        <span className="text-muted-foreground"> {item.description}</span>
+        <span className="text-gray-300"> {item.description}</span>
       </div>
 
       {item.fade.includes("bottom") && (

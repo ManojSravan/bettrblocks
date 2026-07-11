@@ -1,8 +1,4 @@
 import { useState, useEffect } from "react";
-
-import { ChevronRight, Github } from "lucide-react";
-
-import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -12,12 +8,11 @@ import {
   NavigationMenuList,
  
 } from "@/components/ui/navigation-menu";
-import { GITHUB_URL } from "@/consts";
-import { cn } from "@/lib/utils";
+ import { cn } from "@/lib/utils";
 
 const ITEMS = [
-  { label: "Testimonials", href: "/" },
-  { label: "Case Studies", href: "/about" },
+  { label: "Testimonials", href: "/#testimonials" },
+  { label: "Case Studies", href: "/casestudies" },
   { label: "Pricing", href: "/pricing" },
   { label: "FAQ", href: "/faq" },
   { label: "Contact Us", href: "/contact" },
@@ -64,7 +59,7 @@ export const Navbar = () => {
 
         {/* Auth Buttons */}
         <div className="flex items-center gap-2.5">
-          <ThemeToggle />
+          
           <a href="/login" className="max-lg:hidden">
             <Button variant="outline">
               <span className="relative z-10">Book a call</span>

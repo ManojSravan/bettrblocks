@@ -11,49 +11,79 @@ const categories = [
     title: "Getting started",
     questions: [
       {
-        question: "I’m a non-technical founder — can you still build this?",
+        question: "How quickly can we launch our D2C store?",
         answer:
-          "Yes. We’re set up for founder-led teams: we’ll translate your goals into scope, user flows, designs, and a build plan—then ship a production-ready MVP with weekly demos and clear decisions.",
+          "Most D2C startups launch in 4–8 weeks. We handle everything from product setup to payment processing to your first customer—working fast without cutting corners on quality or user experience.",
       },
       {
-        question: "What do you need from me to start?",
+        question: "Do I need an app, website, or both?",
         answer:
-          "A clear problem statement, your target user, and a rough idea of what “success” looks like. If that’s still fuzzy, we’ll start with a Discovery Sprint to get you to clarity fast.",
+          "That depends on your customers' behavior and your goals. We'll help you decide: some brands start web-first for speed and reach, then add a native app later. Others go all-in on mobile. We build both seamlessly.",
       },
       {
-        question: "How fast can we ship an MVP?",
+        question: "What about inventory management and logistics?",
         answer:
-          "Most MVP builds land in 4–8 weeks depending on scope. We’ll give you scope guardrails up front and keep the build focused on the smallest version that proves the idea with real users.",
-      },
-    ],
-  },
-  {
-    title: "Process",
-    questions: [
-      {
-        question: "How do you keep scope from exploding?",
-        answer:
-          "We define a crisp MVP, lock milestones, and use trade-offs: every new idea is either a swap, a follow-up iteration, or a backlog item. You always know what’s in and what’s out.",
-      },
-      {
-        question: "Do you provide design and branding too?",
-        answer:
-          "Yes. We can take you from user flows and UI design through implementation. If you already have designs, we can plug in and build from your Figma.",
+          "We integrate third-party platforms for inventory tracking, order management, and logistics—so you're not reinventing fulfillment. We'll connect you to reliable partners and ensure your systems talk to each other.",
       },
     ],
   },
   {
-    title: "Engagement & handoff",
+    title: "Store & app setup",
     questions: [
       {
-        question: "What happens after launch?",
+        question: "Can you integrate payment processing?",
         answer:
-          "We can move into a Growth Retainer for iterations, experiments, and new features. If you want to bring the work in-house, we’ll hand off cleanly with documentation and a maintainable codebase.",
+          "Yes. We set up Stripe, Razorpay, or your preferred processor, handle PCI compliance, manage subscription billing if needed, and make checkout smooth so customers don't abandon their carts.",
       },
       {
-        question: "Can you work with my existing team or freelancers?",
+        question: "How do you handle customer data and security?",
         answer:
-          "Absolutely. We can integrate with your team, tighten the product plan, and ship alongside your existing engineers—without changing your tools or workflows.",
+          "Data security is non-negotiable. We use encryption, secure authentication, comply with GDPR/CCPA, protect customer payment info, and audit regularly. Your customers' trust is your most valuable asset.",
+      },
+      {
+        question: "Can you build a mobile app without starting from scratch?",
+        answer:
+          "Absolutely. We build iOS and Android apps that share your web codebase where possible, cutting development time and ongoing maintenance. One unified experience across devices.",
+      },
+    ],
+  },
+  {
+    title: "Launch & growth",
+    questions: [
+      {
+        question: "What's included in a successful launch?",
+        answer:
+          "A production-ready store, customer support setup, analytics tracking, email integration, social media feeds, SEO fundamentals, and a launch marketing plan. We'll make sure your first customers have a smooth experience.",
+      },
+      {
+        question: "Can you help with customer acquisition?",
+        answer:
+          "We set up analytics, funnels, and A/B testing so you know what's working. For media buying and content strategy, we can recommend proven partners or bring on fractional marketing support.",
+      },
+      {
+        question: "What happens after we hit our first 1,000 customers?",
+        answer:
+          "That's where scaling begins. We move from build to optimize: faster load times, better search, personalization, loyalty programs, and retention features. We'll be there for whatever comes next.",
+      },
+    ],
+  },
+  {
+    title: "Support & scaling",
+    questions: [
+      {
+        question: "Do you provide ongoing support after launch?",
+        answer:
+          "Yes. We offer retainers for bug fixes, feature releases, performance optimization, and new experiments. Or we can hand off with stellar documentation so your team or another developer can take over.",
+      },
+      {
+        question: "Can you help us understand our metrics and growth?",
+        answer:
+          "We instrument your store with analytics from day one: conversion rates, customer acquisition cost, lifetime value, churn—everything you need to make data-driven decisions.",
+      },
+      {
+        question: "What if we're ready to raise funding?",
+        answer:
+          "We'll help you build a compelling product demo, provide technical due diligence documentation, and ensure your tech stack is investor-friendly. A solid product is one of the best fundraising assets.",
       },
     ],
   },
@@ -82,8 +112,8 @@ export const FAQ = ({
                 Frequently asked questions
               </h2>
             )}
-            <p className="text-muted-foreground max-w-md leading-snug lg:mx-auto">
-              If you can’t find what you’re looking for,{" "}
+            <p className="text-gray-300 max-w-md leading-snug lg:mx-auto">
+              If you can't find what you're looking for,{" "}
               <a href="/contact" className="underline underline-offset-4">
                 get in touch
               </a>
@@ -94,14 +124,14 @@ export const FAQ = ({
           <div className="grid gap-6 text-start">
             {categories.map((category, categoryIndex) => (
               <div key={category.title} className="">
-                <h3 className="text-muted-foreground border-b py-4">
+                <h3 className="text-gray-300 border-b py-4">
                   {category.title}
                 </h3>
                 <Accordion type="single" collapsible className="w-full">
                   {category.questions.map((item, i) => (
                     <AccordionItem key={i} value={`${categoryIndex}-${i}`}>
                       <AccordionTrigger>{item.question}</AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground">
+                      <AccordionContent className="text-gray-300">
                         {item.answer}
                       </AccordionContent>
                     </AccordionItem>

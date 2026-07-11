@@ -13,70 +13,49 @@ type Company = {
 export const Logos = () => {
   const topRowCompanies = [
     {
-      name: "Mercury",
-      logo: "/logos/mercury.svg",
-      width: 143,
-      height: 26,
-      href: "https://mercury.com",
+      name: "Communn.io",
+      logo: "/clients/onecommunn_logo.jpeg",
+      width: 110,
+      height: 20,
+      href: "communn.io",
     },
     {
-      name: "Watershed",
-      logo: "/logos/watershed.svg",
-      width: 154,
-      height: 31,
-      href: "https://watershed.com",
+      name: "Illumora",
+      logo: "/clients/illumora_logo.jpeg",
+      width: 110,
+      height: 20,
+      href: "Illumora.co",
+    },
+     {
+      name: "BoomBooth Studios",
+      logo: "/clients/boombooth.png",
+      width: 110,
+      height: 20,
+      href: "boombooth.com",
     },
     {
-      name: "Retool",
-      logo: "/logos/retool.svg",
-      width: 113,
-      height: 22,
-      href: "https://retool.com",
-    },
-    {
-      name: "Descript",
-      logo: "/logos/descript.svg",
-      width: 112,
-      height: 27,
-      href: "https://descript.com",
+      name: "Chord AI",
+      logo: "/clients/chordai.jpeg",
+      width: 110,
+      height: 20,
+      href: "chordai.com",
     },
   ];
 
   const bottomRowCompanies = [
     {
-      name: "Perplexity",
-      logo: "/logos/perplexity.svg",
-      width: 141,
-      height: 32,
-      href: "https://perplexity.com",
+      name: "Ojas3D Creatives",
+      logo: "/clients/ojaslogo.png",
+      width: 112,
+      height: 27,
+      href: "ojas3d.com",
     },
     {
-      name: "Monzo",
-      logo: "/logos/monzo.svg",
-      width: 104,
-      height: 18,
-      href: "https://monzo.com",
-    },
-    {
-      name: "Ramp",
-      logo: "/logos/ramp.svg",
-      width: 105,
-      height: 28,
-      href: "https://ramp.com",
-    },
-    {
-      name: "Raycast",
-      logo: "/logos/raycast.svg",
-      width: 128,
-      height: 33,
-      href: "https://raycast.com",
-    },
-    {
-      name: "Arc",
-      logo: "/logos/arc.svg",
-      width: 90,
-      height: 28,
-      href: "https://arc.com",
+      name: "AgriGrader Global Solutions",
+      logo: "/clients/agrigrader.png",
+      width: 112,
+      height: 30,
+      href: "https://descript.com",
     },
   ];
 
@@ -85,24 +64,20 @@ export const Logos = () => {
       <div className="container space-y-10 lg:space-y-16">
         <div className="text-center">
           <h2 className="mb-4 text-xl text-balance md:text-2xl lg:text-3xl">
-            Powering the world's best product teams.
+          Trusted by startups and growing businesses.
+
             <br className="max-md:hidden" />
-            <span className="text-muted-foreground">
-              From next-gen startups to established enterprises.
-            </span>
+            <span className="text-gray-300">
+            From early-stage startups to growing businesses.            </span>
           </h2>
         </div>
 
         <div className="flex w-full flex-col items-center gap-8">
-          {/* Top row - 4 logos */}
-          <LogoRow companies={topRowCompanies} gridClassName="grid-cols-4" />
+          {/* Top row - 3 logos */}
+          <LogoRow companies={topRowCompanies} logoBoxClassName="h-20 w-20" />
 
-          {/* Bottom row - 5 logos */}
-          <LogoRow
-            companies={bottomRowCompanies}
-            gridClassName="grid-cols-5"
-            direction="right"
-          />
+          {/* Bottom row - 2 logos */}
+          <LogoRow companies={bottomRowCompanies} logoBoxClassName="h-16 w-28" direction="right" />
         </div>
       </div>
     </section>
@@ -111,35 +86,31 @@ export const Logos = () => {
 
 type LogoRowProps = {
   companies: Company[];
-  gridClassName: string;
+  logoBoxClassName: string;
   direction?: "left" | "right";
 };
 
-const LogoRow = ({ companies, gridClassName, direction }: LogoRowProps) => {
+const LogoRow = ({ companies, logoBoxClassName, direction }: LogoRowProps) => {
   return (
     <>
       {/* Desktop static version */}
       <div className="hidden md:block">
-        <div
-          className={cn(
-            "grid items-center justify-items-center gap-x-20 lg:gap-x-28",
-            gridClassName,
-          )}
-        >
+        <div className="grid auto-cols-max grid-flow-col items-center justify-center justify-items-center gap-x-20 lg:gap-x-28">
           {companies.map((company, index) => (
             <a href={company.href} target="_blank" key={index}>
-              <img
-                src={company.logo}
-                alt={`${company.name} logo`}
-                width={company.width}
-                height={company.height}
-                className="dark:opacity/100 object-contain opacity-50 transition-opacity hover:opacity-70 dark:invert"
-              />
+              <div className={cn("flex items-center justify-center rounded-md", logoBoxClassName)}>
+                <img
+                  src={company.logo}
+                  alt={`${company.name} logo`}
+                  width={company.width}
+                  height={company.height}
+                  className="max-h-full max-w-full object-contain transition-opacity hover:opacity-70"
+                />
+              </div>
             </a>
           ))}
         </div>
       </div>
-
       {/* Mobile marquee version */}
       <div className="md:hidden">
         <Marquee direction={direction} pauseOnHover>
@@ -150,13 +121,15 @@ const LogoRow = ({ companies, gridClassName, direction }: LogoRowProps) => {
               key={index}
               className="mx-8 inline-block transition-opacity hover:opacity-70"
             >
-              <img
-                src={company.logo}
-                alt={`${company.name} logo`}
-                width={company.width}
-                height={company.height}
-                className="object-contain"
-              />
+              <div className={cn("flex items-center justify-center", logoBoxClassName)}>
+                <img
+                  src={company.logo}
+                  alt={`${company.name} logo`}
+                  width={company.width}
+                  height={company.height}
+                  className="max-h-full max-w-full object-contain"
+                />
+              </div>
             </a>
           ))}
         </Marquee>

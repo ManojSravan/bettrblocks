@@ -1,0 +1,29 @@
+---
+import { Background } from '@/components/background';
+import { CaseStudyDetail } from '@/components/blocks/case-study-detail';
+import { SITE_TITLE } from '@/consts';
+import { caseStudies, type CaseStudy } from '@/lib/case-studies';
+import DefaultLayout from '@/layouts/DefaultLayout.astro';
+
+export async function getStaticPaths() {
+	return caseStudies.map((study) => ({
+		params: { slug: study.slug },
+		props: study,
+	}));
+}
+
+type Props = CaseStudy;
+
+const study = Astro.props;
+---
+
+<DefaultLayout
+	title={`${study.title} | Case Study | ${SITE_TITLE}`}
+	description={study.description}
+>
+	<Background>
+		<div class="py-28 lg:pt-44 lg:pb-32">
+			<CaseStudyDetail study={study} client:only="react" />
+		</div>
+	</Background>
+</DefaultLayout>

@@ -1,0 +1,18 @@
+---
+import { Background } from '@/components/background';
+import { CaseStudies } from '@/components/blocks/case-studies';
+import { SITE_TITLE, SITE_DESCRIPTION } from '@/consts';
+import { caseStudies } from '@/lib/case-studies';
+import DefaultLayout from '@/layouts/DefaultLayout.astro';
+---
+
+<DefaultLayout
+	title={`Case Studies | ${SITE_TITLE}`}
+	description="Explore client case studies from Blocks Better — digital products, brand experiences, and platforms built for ambitious teams."
+>
+	<Background>
+		<div class="py-28 lg:pt-44 lg:pb-32">
+			<CaseStudies studies={caseStudies} client:only="react" />
+		</div>
+	</Background>
+</DefaultLayout>

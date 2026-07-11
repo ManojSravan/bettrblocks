@@ -14,60 +14,44 @@ import { cn } from "@/lib/utils";
 
 const items = [
   {
-    quote: "They turned a fuzzy idea into a working MVPfast, calm, and high quality.",
-    author: "Amy Chase",
+    quote:
+      "Took ownership of deployments, improved code quality, and was a dependable engineering partner.",
+    author: "Manjula R",
+    role: "Chief Business Officer",
+    company: "Chord AI",
+    image: "/testimonials/manjula-r.webp",
+  },
+  {
+    quote:
+      "Worked as a true partner, understood our vision, and delivered effective digital solutions.",
+    author: "Sameeksha PN",
     role: "Founder",
-    company: "Fintech Startup",
-    image: "/testimonials/amy-chase.webp",
+    company: "Illumora",
+    image: "/testimonials/sameeksha-pn.webp",
   },
   {
-    quote: "The best part: clear decisions, weekly demos, and no surprises at launch.",
-    author: "Jonas Kotara",
-    role: "Operator",
-    company: "B2B SaaS",
-    image: "/testimonials/jonas-kotara.webp",
-  },
-  {
-    quote: "As a non-technical founder, I finally felt in control of the build process.",
-    author: "Kevin Yam",
+    quote:
+      "Built and launched our ecommerce store with excellent execution and reliable post-launch support.",
+    author: "Vikram",
     role: "Founder",
-    company: "Consumer App",
-    image: "/testimonials/kevin-yam.webp",
+    company: "Ojas3D Creatives",
+    image: "/testimonials/vikram.webp",
   },
   {
-    quote: "Premium engineering and designdelivered like a product team, not an agency.",
-    author: "Kundo Marta",
-    role: "CEO",
-    company: "Marketplace Startup",
-    image: "/testimonials/kundo-marta.webp",
+    quote:
+      "Delivered a clean, elegant landing page that matched my vision perfectly.",
+    author: "Vamsi Kalle",
+    role: "Author",
+    company: "Independent Author",
+    image: "/testimonials/vamsi-kalle.webp",
   },
   {
-    quote: "They turned a fuzzy idea into a working MVPfast, calm, and high quality.",
-    author: "Amy Chase",
-    role: "Founder",
-    company: "Fintech Startup",
-    image: "/testimonials/amy-chase.webp",
-  },
-  {
-    quote: "The best part: clear decisions, weekly demos, and no surprises at launch.",
-    author: "Jonas Kotara",
-    role: "Operator",
-    company: "B2B SaaS",
-    image: "/testimonials/jonas-kotara.webp",
-  },
-  {
-    quote: "As a non-technical founder, I finally felt in control of the build process.",
-    author: "Kevin Yam",
-    role: "Founder",
-    company: "Consumer App",
-    image: "/testimonials/kevin-yam.webp",
-  },
-  {
-    quote: "Premium engineering and designdelivered like a product team, not an agency.",
-    author: "Kundo Marta",
-    role: "CEO",
-    company: "Marketplace Startup",
-    image: "/testimonials/kundo-marta.webp",
+    quote:
+      "A reliable engineer who consistently delivered quality work and collaborated effectively across the team.",
+    author: "Ranjith",
+    role: "Engineering Team",
+    company: "Communn.io",
+    image: "/testimonials/ranjith.webp",
   },
 ];
 
@@ -84,16 +68,9 @@ export const Testimonials = ({
         <div className="container">
           <div className="space-y-4">
             <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-              Trusted by founders and product teams
-            </h2>
-            <p className="text-muted-foreground max-w-md pl-3 leading-snug">
-              We build MVPs with a premium quality barso you can launch, learn,
-              and iterate with confidence.
-            </p>
-            
+            What it's like to work with us            </h2>
           </div>
-
-          <div className="relative mt-8 -mr-[max(3rem,calc((100vw-80rem)/2+3rem))] md:mt-12 lg:mt-20">
+          <div className="relative mt-8 -mr-[max(3rem,calc((100vw-80rem)/2+3rem))] md:mt-12 lg:mt-14">
             <Carousel
               opts={{
                 align: "start",
@@ -117,7 +94,7 @@ export const Testimonials = ({
                             <div className="text-foreground font-semibold">
                               {testimonial.author}, {testimonial.role}
                             </div>
-                            <div className="text-muted-foreground text-sm">
+                            <div className="text-gray-300 text-sm">
                               {testimonial.company}
                             </div>
                           </div>

@@ -1,37 +1,37 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
 
-export const SITE_TITLE = "Blocks Better — Premium MVP Studio";
+export const SITE_TITLE = "BettrBlocks Studio";
 export const SITE_DESCRIPTION =
-  "A premium product engineering studio building MVPs for small startups and non‑technical founders — strategy, design, engineering, and launch.";
+  "D2C digital partner specializing in high-performing ecommerce experiences and customer-facing digital products.";
 
 export const GITHUB_URL =
   "/contact";
 
 export const SITE_METADATA = {
   title: {
-    default: "Blocks Better — Premium MVP Studio",
-    template: "%s | Blocks Better",
+    default: "BettrBlocks Studio",
+    template: "%s | BettrBlocks Studio",
   },
   description:
-    "A premium product engineering studio building MVPs for small startups and non‑technical founders — from idea to shipped product.",
+    "D2C digital partner specializing in high-performing ecommerce experiences and customer-facing digital products.",
   keywords: [
-    "Astro",
-    "product engineering studio",
-    "mvp development",
-    "startup mvp",
-    "non-technical founders",
-    "startup studio",
+    "d2c digital partner",
+    "ecommerce development",
+    "d2c brands",
+    "digital partner",
+    "ecommerce platform",
+    "customer experiences",
+    "d2c solutions",
     "product design",
-    "ui ux design",
-    "full stack development",
-    "react",
-    "astro",
-    "tailwind",
+    "web development",
+    "digital products",
+    "conversion optimization",
+    "commerce engineering",
   ],
-  authors: [{ name: "Blocks Better" }],
-  creator: "Blocks Better",
-  publisher: "Blocks Better",
+  authors: [{ name: "BettrBlocks Studio" }],
+  creator: "BettrBlocks Studio",
+  publisher: "BettrBlocks Studio",
   robots: {
     index: true,
     follow: true,
@@ -48,24 +48,24 @@ export const SITE_METADATA = {
     shortcut: [{ url: "/favicon/favicon.ico" }],
   },
   openGraph: {
-    title: "Blocks Better — Premium MVP Engineering Studio",
+    title: "BettrBlocks Studio",
     description:
-      "A premium product engineering studio building MVPs for small startups and non‑technical founders — from idea to shipped product.",
-    siteName: "Blocks Better",
+      "D2C digital partner specializing in high-performing ecommerce experiences and customer-facing digital products.",
+    siteName: "BettrBlocks Studio",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Blocks Better — Premium MVP Engineering Studio",
+        alt: "BettrBlocks Studio - D2C Digital Partner",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Blocks Better — Premium MVP Engineering Studio",
+    title: "BettrBlocks Studio",
     description:
-      "We build MVPs for small startups and non‑technical founders — strategy, design, engineering, and launch.",
+      "D2C digital partner specializing in high-performing ecommerce experiences and customer-facing digital products.",
     images: ["/og-image.jpg"],
     creator: "@blocksbetter",
   },

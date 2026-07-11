@@ -15,133 +15,106 @@ interface FeatureSection {
   category: string;
   features: {
     name: string;
-    free: true | false | null | string;
+    website: true | false | null | string;
     startup: true | false | null | string;
-    enterprise: true | false | null | string;
   }[];
 }
 
 const pricingPlans = [
   {
-    name: "Discovery Sprint",
+    name: "Business Website",
     button: {
       text: "Book a call",
       variant: "outline" as const,
     },
   },
   {
-    name: "MVP Build",
+    name: "Build Your Startup",
     button: {
       text: "Book a call",
-      variant: "outline" as const,
-    },
-  },
-  {
-    name: "Growth Retainer",
-    button: {
-      text: "Talk to us",
-      variant: "outline" as const,
+      variant: "default" as const,
     },
   },
 ];
 
 const comparisonFeatures: FeatureSection[] = [
   {
-    category: "Engagement",
+    category: "Core Features",
     features: [
       {
-        name: "Typical timeline",
-        free: "1–2 weeks",
-        startup: "4–8 weeks",
-        enterprise: "Monthly",
+        name: "Modern, professional design",
+        website: true,
+        startup: true,
       },
       {
-        name: "Weekly demos",
-        free: true,
+        name: "Mobile-friendly & fast-loading",
+        website: true,
         startup: true,
-        enterprise: true,
       },
       {
-        name: "Async updates",
-        free: true,
+        name: "Online store & product catalog",
+        website: false,
         startup: true,
-        enterprise: true,
+      },
+      {
+        name: "Mobile app (iOS & Android)",
+        website: false,
+        startup: true,
       },
     ],
   },
   {
-    category: "Delivery",
+    category: "Development",
     features: [
       {
-        name: "Product brief + scope guardrails",
-        free: true,
+        name: "Design & Engineering",
+        website: true,
         startup: true,
-        enterprise: true,
       },
       {
-        name: "Clickable prototype (if needed)",
-        free: true,
+        name: "Production deployment",
+        website: true,
         startup: true,
-        enterprise: true,
       },
       {
-        name: "Design + engineering",
-        free: null,
+        name: "QA & bug fixes",
+        website: true,
         startup: true,
-        enterprise: true,
       },
       {
-        name: "Production deployment + CI/CD",
-        free: null,
+        name: "Analytics & event tracking",
+        website: false,
         startup: true,
-        enterprise: true,
-      },
-      {
-        name: "QA pass + bugfix window",
-        free: null,
-        startup: true,
-        enterprise: true,
-      },
-      {
-        name: "Analytics + event tracking",
-        free: null,
-        startup: true,
-        enterprise: true,
       },
       {
         name: "Experimentation & iterations",
-        free: null,
+        website: false,
         startup: true,
-        enterprise: true,
-      },
-      {
-        name: "Ongoing roadmap planning",
-        free: null,
-        startup: null,
-        enterprise: true,
       },
     ],
   },
   {
-    category: "Support & operations",
+    category: "Support & Launch",
     features: [
       {
         name: "Priority support",
-        free: true,
+        website: true,
         startup: true,
-        enterprise: true,
       },
       {
-        name: "Dedicated product partner",
-        free: null,
-        startup: null,
-        enterprise: true,
+        name: "Dedicated team for launch",
+        website: true,
+        startup: true,
       },
       {
-        name: "Monitoring + reliability improvements",
-        free: null,
+        name: "Ongoing roadmap planning",
+        website: false,
         startup: true,
-        enterprise: true,
+      },
+      {
+        name: "Cross-platform management",
+        website: false,
+        startup: true,
       },
     ],
   },
@@ -234,7 +207,7 @@ const PlanHeaders = ({
       </div>
 
       {/* Desktop View */}
-      <div className="grid grid-cols-4 gap-4 max-md:hidden">
+      <div className="grid grid-cols-3 gap-4 max-md:hidden">
         <div className="col-span-1 max-md:hidden"></div>
 
         {pricingPlans.map((plan, index) => (
@@ -260,7 +233,7 @@ const FeatureSections = ({ selectedPlan }: { selectedPlan: number }) => (
         {section.features.map((feature, featureIndex) => (
           <div
             key={featureIndex}
-            className="text-foreground grid grid-cols-2 font-medium max-md:border-b md:grid-cols-4"
+            className="text-foreground grid grid-cols-2 font-medium max-md:border-b md:grid-cols-3"
           >
             <span className="inline-flex items-center py-4">
               {feature.name}
@@ -269,24 +242,20 @@ const FeatureSections = ({ selectedPlan }: { selectedPlan: number }) => (
             <div className="md:hidden">
               <div className="flex items-center gap-1 py-4 md:border-b">
                 {renderFeatureValue(
-                  [feature.free, feature.startup, feature.enterprise][
-                    selectedPlan
-                  ],
+                  selectedPlan === 0 ? feature.website : feature.startup
                 )}
               </div>
             </div>
             {/* Desktop View - All Plans */}
-            <div className="hidden md:col-span-3 md:grid md:grid-cols-3 md:gap-4">
-              {[feature.free, feature.startup, feature.enterprise].map(
-                (value, i) => (
-                  <div
-                    key={i}
-                    className="flex items-center gap-1 border-b py-4"
-                  >
-                    {renderFeatureValue(value)}
-                  </div>
-                ),
-              )}
+            <div className="hidden md:col-span-2 md:grid md:grid-cols-2 md:gap-4">
+              {[feature.website, feature.startup].map((value, i) => (
+                <div
+                  key={i}
+                  className="flex items-center gap-1 border-b py-4"
+                >
+                  {renderFeatureValue(value)}
+                </div>
+              ))}
             </div>
           </div>
         ))}

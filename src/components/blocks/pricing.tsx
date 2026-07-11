@@ -1,117 +1,90 @@
 "use client";
 
-import { useState } from "react";
-
 import { Check } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Switch } from "@/components/ui/switch";
 import { cn } from "@/lib/utils";
 
 const plans = [
   {
-    name: "Discovery Sprint",
-    monthlyPrice: "$2,500",
-    yearlyPrice: "$4,500",
-    description: "1–2 weeks to align and de-risk",
+    name: "Business Website",
+    price: "₹30,000",
+    priceSuffix: "starting",
+    tagline: "A website that sells while you sleep",
     features: [
-      "Product brief + scope guardrails",
-      "Clickable prototype (if needed)",
-      "Technical plan + delivery roadmap",
-      "Clear estimate for MVP build",
+      "Modern, professional design",
+      "Built to convert visitors into customers",
+      "Mobile-friendly, fast-loading pages",
+      "Clear messaging that builds trust",
+      "Launch-ready in days, not months",
     ],
+    highlighted: false,
   },
   {
-    name: "MVP Build",
-    monthlyPrice: "$9,500",
-    yearlyPrice: "$24,000",
+    name: "Build Your Startup",
+    price: "₹60,000",
+    priceSuffix: "starting",
+    tagline: "Everything you need to launch and sell",
     features: [
-      "Design + full-stack engineering",
-      "Production deployment + CI/CD",
-      "QA pass + bugfix window",
-      "Analytics + event tracking",
-      "Weekly demos + async updates",
+      "Online store to sell your products",
+      "Mobile app for iOS and Android",
+      "Seamless experience across web and app",
+      "Built to scale as your business grows",
+      "One team handling your entire launch",
     ],
-  },
-  {
-    name: "Growth Retainer",
-    monthlyPrice: "$6,500",
-    yearlyPrice: "$18,000",
-    features: [
-      "Ongoing iterations & experiments",
-      "Performance, reliability, and refactors",
-      "New features shipped every week",
-      "Priority support and planning",
-    ],
+    highlighted: true,
   },
 ];
 
 export const Pricing = ({ className }: { className?: string }) => {
-  const [isAnnual, setIsAnnual] = useState(true);
-
   return (
     <section className={cn("py-28 lg:py-32", className)}>
-      <div className="container max-w-5xl">
+      <div className="container max-w-4xl">
         <div className="space-y-4 text-center">
           <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
             Pricing
           </h2>
-          <p className="text-muted-foreground mx-auto max-w-xl leading-snug text-balance">
-            Premium engagements for founders who want a real product team—without
-            hiring one. Start with a sprint, ship an MVP, then iterate with a
-            retainer.
+          <p className="text-gray-300 mx-auto max-w-xl leading-snug text-balance">
+            Simple, outcome-driven packages for founders who want results, not
+            jargon.
           </p>
         </div>
 
-        <div className="mt-8 grid items-start gap-5 text-start md:mt-12 md:grid-cols-3 lg:mt-20">
+        <div className="mt-8 grid items-start gap-6 text-start md:mt-12 md:grid-cols-2 lg:mt-20">
           {plans.map((plan) => (
             <Card
               key={plan.name}
-              className={`${
-                plan.name === "MVP Build"
-                  ? "outline-primary origin-top outline-4"
-                  : ""
-              }`}
+              className={cn(
+                plan.highlighted && "outline-primary origin-top outline-4"
+              )}
             >
-              <CardContent className="flex flex-col gap-7 px-6 py-5">
+              <CardContent className="flex flex-col gap-7 px-6 py-6">
                 <div className="space-y-2">
-                  <h3 className="text-foreground font-semibold">{plan.name}</h3>
-                  <div className="space-y-1">
-                    <div className="text-muted-foreground text-lg font-medium">
-                      {isAnnual ? plan.yearlyPrice : plan.monthlyPrice}{" "}
-                      {plan.name !== "Free" && (
-                        <span className="text-muted-foreground">
-                          per user/
-                          {isAnnual ? "year" : "month"}
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                </div>
-
-                {plan.name !== "Free" ? (
-                  <div className="flex items-center gap-2">
-                    <Switch
-                      checked={isAnnual}
-                      onCheckedChange={() => setIsAnnual(!isAnnual)}
-                      aria-label="Toggle annual billing"
-                    />
-                    <span className="text-sm font-medium">
-                      Fixed project pricing
+                  {plan.highlighted && (
+                    <span className="bg-primary/10 text-primary inline-block rounded-full px-3 py-1 text-xs font-medium">
+                      Most Popular
+                    </span>
+                  )}
+                  <h3 className="text-foreground text-lg font-semibold">
+                    {plan.name}
+                  </h3>
+                  <p className="text-gray-300 text-sm">{plan.tagline}</p>
+                  <div className="pt-1">
+                    <span className="text-foreground text-2xl font-semibold">
+                      {plan.price}
+                    </span>
+                    <span className="text-gray-300 ml-1.5 text-sm">
+                      {plan.priceSuffix}
                     </span>
                   </div>
-                ) : (
-                  <span className="text-muted-foreground text-sm">
-                    {plan.description}
-                  </span>
-                )}
+                </div>
 
                 <div className="space-y-3">
                   {plan.features.map((feature) => (
                     <div
                       key={feature}
-                      className="text-muted-foreground flex items-center gap-1.5"
+                      className="text-gray-300 flex items-center gap-1.5"
                     >
                       <Check className="size-5 shrink-0" />
                       <span className="text-sm">{feature}</span>
@@ -121,9 +94,16 @@ export const Pricing = ({ className }: { className?: string }) => {
 
                 <Button
                   className="w-fit"
-                  variant={plan.name === "MVP Build" ? "default" : "outline"}
+                  variant={plan.highlighted ? "default" : "outline"}
+                  asChild
                 >
-                  Book a call
+                  <a
+                    href="https://cal.com/manoj-sravan-annivg/strategy-call"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Book a call
+                  </a>
                 </Button>
               </CardContent>
             </Card>

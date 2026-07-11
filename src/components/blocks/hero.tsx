@@ -11,26 +11,26 @@ import { Button } from "@/components/ui/button";
 import { GITHUB_URL } from "@/consts";
 
 const features = [
-  {
-    title: "Founder-friendly process",
-    description: "Clear milestones, weekly demos, and zero hand-wavy updates.",
-    icon: CircleDot,
-  },
-  {
-    title: "Design + engineering",
-    description: "Product design, full-stack build, QA, and launch under one roof.",
-    icon: Blend,
-  },
-  {
-    title: "MVP in weeks",
-    description: "Ship a production-ready MVP fast, then iterate with real users.",
-    icon: Diamond,
-  },
-  {
-    title: "Premium quality bar",
-    description: "Clean architecture, tests where it matters, and great UX by default.",
-    icon: ChartNoAxesColumn,
-  },
+ {
+  title: "Built to convert",
+  description: "Every page, interaction, and checkout flow is designed to maximize conversions and revenue.",
+  icon: CircleDot,
+},
+{
+  title: "Commerce-first engineering",
+  description: "Fast, scalable ecommerce platforms and customer experiences built for long-term growth.",
+  icon: Blend,
+},
+{
+  title: "Growth-focused execution",
+  description: "Launch quickly, measure what matters, and continuously improve with data-driven iterations.",
+  icon: Diamond,
+},
+{
+  title: "Premium digital experiences",
+  description: "Beautiful design, fast performance, and seamless user journeys that strengthen your brand.",
+  icon: ChartNoAxesColumn,
+},
 ];
 
 export const Hero = () => {
@@ -40,13 +40,11 @@ export const Hero = () => {
         {/* Left side - Main content */}
         <div className="flex-1">
           <h1 className="text-foreground max-w-160 text-3xl tracking-tight md:text-4xl lg:text-5xl xl:whitespace-nowrap">
-            Premium MVP engineering for <br /> builders who move fast
+          Build your Startup <br /> with BettrBlocks Studio
           </h1>
 
-          <p className="text-muted-foreground text-1xl mt-5 md:text-3xl">
-            We help small startups and non‑technical founders turn an idea into a
-            shipped product strategy, design, build, and launch.
-          </p>
+          <p className="text-gray-300 text-1xl mt-5 md:text-3xl">
+We partner with D2C brands to design, build, and scale high-performing ecommerce experiences and customer-facing digital products.          </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4 lg:flex-nowrap">
             <Button asChild>
@@ -87,7 +85,7 @@ export const Hero = () => {
                   <h2 className="font-text text-foreground font-semibold">
                     {feature.title}
                   </h2>
-                  <p className="text-muted-foreground max-w-76 text-sm">
+                  <p className="text-gray-300 max-w-76 text-sm">
                     {feature.description}
                   </p>
                 </div>

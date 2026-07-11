@@ -7,25 +7,31 @@ import { Features } from '@/components/blocks/features';
 import { Hero } from '@/components/blocks/hero';
 import { Logos } from '@/components/blocks/logos';
 import { Pricing } from '@/components/blocks/pricing';
+import { CaseStudies } from '@/components/blocks/case-studies';
+import { caseStudies } from '@/lib/case-studies';
+import HomeProductCarousel from '@/components/blocks/product-carousel';
 import { ResourceAllocation } from '@/components/blocks/resource-allocation';
 import { Testimonials } from '@/components/blocks/testimonials';
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
-
-
 
 ---
 
 <DefaultLayout title={SITE_TITLE} description={SITE_DESCRIPTION} >
   <Background className="via-muted to-muted/100">
+  
     <Hero />
-    <Logos client:only="react"/> 
-  <Testimonials client:only='react'/>
+    <HomeProductCarousel/>
+    <Testimonials client:only='react'/>
+    <div class="pt-12">
+      <Logos client:only="react"/> 
+    </div>
     <Features />
+    <CaseStudies studies={caseStudies} client:only="react" />
    
   </Background>
   <Background variant="bottom">
     <Pricing client:only='react'/>
-     <ResourceAllocation />
+     <!-- <ResourceAllocation /> -->
     <FAQ client:only='react'/>
   </Background>
 </DefaultLayout>

@@ -303,3 +303,18 @@ body {
     border-color: var(--color-gray-200, currentColor);
   }
 }
+
+@layer utilities {
+  .animate-marquee-products {
+    animation: marquee-products 40s linear infinite;
+  }
+
+  @keyframes marquee-products {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
