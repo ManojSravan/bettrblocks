@@ -48,7 +48,7 @@ We partner with D2C brands to design, build, and scale high-performing ecommerce
 
           <div className="mt-8 flex flex-wrap items-center gap-4 lg:flex-nowrap">
             <Button asChild>
-              <a href={GITHUB_URL}>Book a discovery call</a>
+              <a href={'https://cal.com/manoj-sravan-annivg/strategy-call'}>Book a discovery call</a>
             </Button>
             <Button
               variant="outline"
@@ -56,10 +56,10 @@ We partner with D2C brands to design, build, and scale high-performing ecommerce
               asChild
             >
               <a
-                href="/about"
+                href="/casestudies"
                 className="max-w-56 truncate text-start md:max-w-none"
               >
-                Our approach
+                Explore CaseStudies
                 <ArrowRight className="stroke-3" />
               </a>
             </Button>
