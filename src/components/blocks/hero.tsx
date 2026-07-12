@@ -47,13 +47,10 @@ export const Hero = () => {
 We partner with D2C brands to design, build, and scale high-performing ecommerce experiences and customer-facing digital products.          </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4 lg:flex-nowrap">
-            <Button asChild>
-              <a href={'https://cal.com/manoj-sravan-annivg/strategy-call'}>Book a discovery call</a>
-            </Button>
+            
             <Button
               variant="outline"
-              className="from-background h-auto gap-2 bg-black dark:bg-white dark:text-black text-white dark:hover:text-white shadow-md"
-              asChild
+               asChild
             >
               <a
                 href="/casestudies"
@@ -62,6 +59,9 @@ We partner with D2C brands to design, build, and scale high-performing ecommerce
                 Explore CaseStudies
                 <ArrowRight className="stroke-3" />
               </a>
+            </Button>
+            <Button asChild>
+              <a href={'https://cal.com/manoj-sravan-annivg/strategy-call'}>Book a Call</a>
             </Button>
           </div>
         </div>
