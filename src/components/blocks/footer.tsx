@@ -13,8 +13,7 @@ export function Footer() {
   ];
 
   const social = [
-    { name: "X", href: "#" },
-    { name: "LinkedIn", href: "#" },
+    { name: "LinkedIn", href: "https://www.linkedin.com/company/bettrblocks-studio" },
   ];
 
   const legal = [{ name: "Privacy Policy", href: "/privacy" }];
