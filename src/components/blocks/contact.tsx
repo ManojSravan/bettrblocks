@@ -24,7 +24,7 @@ const contactInfo = [
             href="mailto:hello@blocksbetter.studio"
             className="text-muted-foreground hover:text-foreground"
           >
-            hello@blocksbetter.studio
+           contact@bettrblocksstudio.com
           </a>
         </div>
         <div className="mt-1">
@@ -33,7 +33,7 @@ const contactInfo = [
             href="mailto:partners@blocksbetter.studio"
             className="text-muted-foreground hover:text-foreground"
           >
-            partners@blocksbetter.studio
+           hello@sravantechlabs.com
           </a>
         </div>
       </div>

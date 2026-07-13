@@ -15,7 +15,7 @@ import { cn } from "@/lib/utils";
 const items = [
   {
     quote:
-      "Took ownership of deployments, improved code quality, and was a dependable engineering partner.",
+      "Took complete ownership of delivery, communicated proactively, and consistently moved the project forward with confidence.",
     author: "Manjula R",
     role: "Chief Business Officer",
     company: "Chord AI",
@@ -23,7 +23,7 @@ const items = [
   },
   {
     quote:
-      "Worked as a true partner, understood our vision, and delivered effective digital solutions.",
+      "Worked as a true product partner, understood our vision, and translated ideas into a polished digital experience.",
     author: "Sameeksha PN",
     role: "Founder",
     company: "Illumora",
@@ -31,7 +31,7 @@ const items = [
   },
   {
     quote:
-      "Built and launched our ecommerce store with excellent execution and reliable post-launch support.",
+      "Owned the project end-to-end, delivered on time, and continued to provide dependable support after launch.",
     author: "Vikram",
     role: "Founder",
     company: "Ojas3D Creatives",
@@ -39,19 +39,11 @@ const items = [
   },
   {
     quote:
-      "Delivered a clean, elegant landing page that matched my vision perfectly.",
+      "Understood the vision from day one and took full ownership to deliver a clean, thoughtful final product.",
     author: "Vamsi Kalle",
     role: "Author",
     company: "Independent Author",
     image: "/testimonials/vamsi-kalle.webp",
-  },
-  {
-    quote:
-      "A reliable engineer who consistently delivered quality work and collaborated effectively across the team.",
-    author: "Ranjith",
-    role: "Engineering Team",
-    company: "Communn.io",
-    image: "/testimonials/ranjith.webp",
   },
 ];
 
